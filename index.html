@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Order summary card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    *{
+      box-sizing: border-box;
+      font-family: 'Red Hat Display';
+    }
+    body{
+      min-height: 95vh;
+      background-image: url(./images/pattern-background-desktop.svg);
+      background-color: hsl(225, 100%, 94%);
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .container {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      min-height: 80vh;
+      width: 30%;
+      background-color: white;
+      border-radius: 25px;
+      box-shadow: 0px 15px 30px hsl(225, 100%, 90%);
+    }
+    .profile {
+        min-height: 30%;
+        max-width: fit-content;
+        object-fit: contain;
+    }
+    .profile img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px 25px 10px 30px;
+        flex: 1;
+    }
+    #infoparagraph {
+        text-align: center;
+        line-height: 20px;
+        font-size: 13px;
+        margin-bottom: 25px;
+        padding: 0px 30px;
+    }
+     #margintop {
+        margin-bottom: -5px;
+     }
+     .subscription-card {
+        width: 90%;
+        height: 10vh;
+        background-color: hsl(225, 100%, 98%);
+        display: flex;
+        flex-direction: row;
+        border-radius: 10px;
+        padding: 16px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        margin-top: -10px;
+     }
+     .details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 1;
+     }
+     .details img {
+       margin-right: 10px;
+     }
+     .plan {
+      line-height: 7px;
+      margin-left: 6px;
+     }
+     .change {
+      font-size: 11px;
+      font-weight: 700;
+     }
+     .change a:hover {
+      text-decoration: none;
+      opacity: 0.7;
+     }
+     .button {
+      height: auto;
+      width: 90%;
+      padding: 11px;
+      text-align: center;
+      background-color: hsl(245, 75%, 52%);
+      border-radius: 10px;
+      box-shadow: 0 15px 15px hsl(225, 100%, 94%), 0px 0px 5px rgba(0, 0, 0, 0.3);
+      border: none;
+     }
+     .button a {
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 11px;
+     }
+     .button:hover {
+      opacity: 0.6;
+      cursor: pointer;
+     }
+     .cancel a {
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      color: hsl(224, 23%, 55%);
+     }
+     .cancel a:hover {
+      color: hsl(223, 47%, 23%);
+      font-weight: 900;
+     }
+     .attribution { 
+        font-size: 11px; 
+        text-align: center;
+        margin-top: -10px;
+     }
+    .attribution a { 
+      color: hsl(228, 45%, 44%);
+     }
+     /* font weights for specific elements */
+     .bold {
+      font-weight: 900;
+     }
+     .medium {
+      font-weight: 700;
+     }
+     .light {
+      font-weight: 500;
+     }
+     h1 {
+       font-weight: 900;
+       font-size: 22px;
+       color: hsl(223, 47%, 23%);
+     }
+     p {
+       font-weight: 500;
+       color: hsl(224, 23%, 55%);
+     }
+     #planname {
+       color: hsl(223, 47%, 23%);
+       font-size: 12.5px;
+     }
+     #planprice {
+       font-size: 12.5px;
+     }
+     
+  @media (max-width:1440px) {
+ .container{
+    min-height: 40vh;
+    width:30%;
+ }
+ .profile{
+    min-height:10vh;
+ }
+ 
+}
+@media(max-width:1024px){
+  .container{
+    width:40%;
+    min-height:50vh;
+  }
+}
+ @media (max-width:768px) {
+    .profile{
+        min-height: 10vh;
+    }
+    .info{
+        padding: 0 32px 32px;
+    }
+    
+}
+ @media (max-width:468px){
+    .container{
+        width: 100%;
+        min-height:80vh;
+        width:fit-content;
+        margin-right:10px;
+        margin-left:10px;
+    }
+    .info{
+        padding:0 32px 16px;
+    }
+    h1{
+        font-size: 20px
+    }
+    p, .control a, .button, .cancel-btn{
+        font-size: 12px;
+    }
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+}
+ @media(max-width:320px){
+    .container{
+        min-height:90vh;
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img src="./images/illustration-hero.svg" alt="Picture of a person listening to music">
+    </div>
+    <div class="info">
+      <h1 id="margintop">Order Summary</h1>
+      <p id="infoparagraph">You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!
+      </p>
+        <!--subscription-card-->
+      <div class="subscription-card">
+        <div class="details">
+          <img src="./images/icon-music.svg" alt="music image" width="37px" height="37px">
+          <div class="plan">
+            <p class="bold" id="planname">Annual Plan</p>
+            <p id="planprice">&dollar;59.99/year</p>
+          </div>
+        </div>
+        <div class="change">
+          <a href="#" >Change </a>
+        </div>
+      </div>
+      <button class="button"><a href="#">Proceed to Payment</a></button>
+       <p class="cancel"><a  href="#">Cancel Order</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Florentina Antigha</a>.
+    </div>
+  </footer>
+  
+</body>
+</html>
